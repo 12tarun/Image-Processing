@@ -3,8 +3,8 @@ import math
 from Histogram import histogram as h
 
 
-img1 = cv2.imread('Low_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
-img2 = cv2.imread('Modified_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
+img1 = cv2.imread('image_process_f16.jpg', cv2.IMREAD_GRAYSCALE)
+img2 = cv2.imread('Better_Modified_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
 
 height1 = img1.shape[0]
 width1 = img1.shape[1]
@@ -26,5 +26,5 @@ for i in range(0, 256):
     if p2 > 0:
         Entropy2 += p2*math.log(p2, 2)
 
-print(f"Entropy of Low_Contrast {-Entropy1} ")
-print(f"Entropy of Modified_Contrast {-Entropy2} ")
+print(f"Entropy of image_process_f16 {-Entropy1} ")
+print(f"Entropy of Better_Modified_Contrast {-Entropy2} ")

@@ -2,8 +2,8 @@ import numpy as np
 import cv2
 import math
 
-img1 = cv2.imread('Low_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
-img2 = cv2.imread('Modified_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
+img1 = cv2.imread('image_process_f16.jpg', cv2.IMREAD_GRAYSCALE)
+img2 = cv2.imread('Better_Modified_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
 
 height = img1.shape[0]
 width = img1.shape[1]
@@ -32,7 +32,7 @@ C2 = (z/pixels) - ((y/pixels)**2)
 Contrast1 = 10*math.log(C1, 10)
 Contrast2 = 10*math.log(C2, 10)
 
-print(f"PSNR of Modified_Contrast {PSNR} ")
+print(f"PSNR of Better_Modified_Contrast {PSNR} ")
 
-print(f"Contrast of Low_Contrast {Contrast1} ")
-print(f"Contrast of Modified_Contrast {Contrast2} ")
+print(f"Contrast of image_process_f16 {Contrast1} ")
+print(f"Contrast of Better_Modified_Contrast {Contrast2} ")

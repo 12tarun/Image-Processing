@@ -5,7 +5,7 @@ import math
 from Histogram import histogram as h
 from CumulativeHistogram import cumulative_histogram as ch
 
-img = cv2.imread('Low_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('image_process_f16.jpg', cv2.IMREAD_GRAYSCALE)
 
 height = img.shape[0]
 width = img.shape[1]
@@ -13,6 +13,7 @@ pixels = width*height
 
 hist = h(img)
 cum_hist = ch(hist)
+
 
 for i in np.arange(height):
     for j in np.arange(width):

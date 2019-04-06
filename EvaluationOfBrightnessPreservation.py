@@ -1,8 +1,8 @@
 import numpy as np
 import cv2
 
-img1 = cv2.imread('Low_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
-img2 = cv2.imread('Modified_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
+img1 = cv2.imread('image_process_f16.jpg', cv2.IMREAD_GRAYSCALE)
+img2 = cv2.imread('Better_Modified_Contrast.jpg', cv2.IMREAD_GRAYSCALE)
 
 height = img1.shape[0]
 width = img1.shape[1]
@@ -16,4 +16,4 @@ for i in np.arange(height):
 
 AMBE = abs((a/pixels) - (b/pixels))
 
-print(f"AMBE of Modified_Contrast {AMBE} ")
+print(f"AMBE of Better_Modified_Contrast {AMBE} ")
